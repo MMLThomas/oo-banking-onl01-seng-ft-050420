@@ -18,7 +18,7 @@ class Transfer
     if @sender.balance >= @amount
       @sender.withdraw(@amount) 
       @receiver.deposit(@amount)
-      @status = "completed"
+      @status = "complete"
     else
       @status = "rejected"
     end
