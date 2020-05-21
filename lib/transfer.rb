@@ -15,7 +15,7 @@ class Transfer
   end
   
   def execute_transaction
-    if @sender.balance >= @amount && @receiver.status == "open" && @status !
+    if @sender.balance >= @amount && @receiver.status == "open" && @status != "complete"
       @sender.withdraw(@amount) 
       @receiver.deposit(@amount)
       @status = "complete"
