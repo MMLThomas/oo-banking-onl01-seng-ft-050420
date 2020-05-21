@@ -15,7 +15,9 @@ class Transfer
   end
   
   def execute_transaction
-    sender.balance >= amount ?
+    if @sender.balance >= @amount
+      @sender.withdraw(@amount) 
+      @receiver.deposite
   
   
   
